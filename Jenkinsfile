@@ -16,7 +16,12 @@ pipeline {
         
         stage ('TEST') {
             steps {
-                echo 'TEST SUCCESS'
+                sh '''cd backend
+                mvn sonar:sonar \\
+                -Dsonar.projectKey=student-app \\
+                -Dsonar.projectName=\'student-app\' \\
+                -Dsonar.host.url=http://35.171.184.89:9000 \\
+                -Dsonar.token=sqp_1787929eb51358baa849839cc146b2e295554597'''
                 }
         }
         
@@ -28,3 +33,4 @@ pipeline {
         
     }
 }
+
