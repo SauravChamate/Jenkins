@@ -1,2 +1,2 @@
 # Jenkins
-CI/CD pipeline for student-app project
+Build a CI/CD pipeline for the student-app project using Jenkins.
