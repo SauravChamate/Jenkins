@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage ('PULL'){
             steps {
-                git branch: 'main', url: 'https://github.com/SauravChamate/Jenkins.git'
-            }
+                git branch: 'devops', url: 'https://github.com/jambhulkarcloudblitz-alt/CDEC-studentapp.git'
         }
 
         stage ('BUILD'){
@@ -33,4 +32,4 @@ pipeline {
         
     }
 }
-
+}
