@@ -6,9 +6,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/SauravChamate/Jenkins.git'
             }
         }
+
         stage ('BUILD'){
             steps {
-                echo 'BUILD SUCCESS'
+                sh '''cd backend
+                mvn clean package -DskipTests'''  
             }
         }
         
@@ -18,7 +20,6 @@ pipeline {
                 }
         }
         
-
         stage ('DEPLOY'){
             steps {
                 echo 'DEPLOY SUCCESS'
